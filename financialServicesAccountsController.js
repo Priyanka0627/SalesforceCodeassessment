@@ -13,7 +13,7 @@
     },
 
     sortByOwner : function(component, event, helper) {
-        helper.sortAccounts(component, 'Owner.Name');
+        helper.sortAccounts(component, 'OwnerId');
     },
 
     handleRowAction : function(component, event, helper) {
