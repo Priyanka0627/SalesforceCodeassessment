@@ -21,7 +21,6 @@
         const row = event.getParam('row');
         switch (actionName) {
             case 'edit':
-                // Logic to edit the record can be added here
                 break;
             default:
                 break;
