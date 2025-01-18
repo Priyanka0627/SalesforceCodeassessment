@@ -15,11 +15,11 @@ export default class FinancialAccountServicesList extends LightningElement {
         if (data) {
             console.log(data);
 
-            // Add accountLink to each record dynamically
+            // Adding accountLink to each record dynamically
             this.fullTableData = data.map(account => ({
                 ...account,
-                accountLink: `/lightning/r/Account/${account.Id}/view`, // Generate URL to the Account record
-                OwnerName: account.Owner.Name  // Ensure OwnerName is accessible
+                accountLink: `/lightning/r/Account/${account.Id}/view`, 
+                OwnerName: account.Owner.Name  
             }));
 
             this.filteredData = this.fullTableData;
@@ -49,7 +49,8 @@ export default class FinancialAccountServicesList extends LightningElement {
             { label: 'OwnerName', value: 'OwnerName' }
         ];
     }
-
+    
+    // Filtering logic
     filterbyHandler(event) {
         this.filterBy = event.target.value;
     }
@@ -93,14 +94,14 @@ export default class FinancialAccountServicesList extends LightningElement {
         return cloneData;
     }
 
-    // Define columns for the lightning datatable, including a URL for the account name
+    // Defined columns for the lightning datatable, including a URL for the account name
     get columns() {
         return [
             {
                 label: 'Account Name',
-                fieldName: 'accountLink',  // Custom field containing the URL
+                fieldName: 'accountLink',  
                 type: 'url',
-                typeAttributes: { label: { fieldName: 'Name' }, target: '_blank' }  // Open in new tab
+                typeAttributes: { label: { fieldName: 'Name' }, target: '_blank' }  
             },
             { label: 'Account Owner', fieldName: 'OwnerName' },
             { label: 'Phone', fieldName: 'Phone' },
