@@ -32,7 +32,7 @@ export default class FinancialAccountServicesList extends LightningElement {
     // Filter options
     get FilterByOptions() {
         return [
-            { label: 'Name', value: 'Name' }
+            { label: 'Account Name', value: 'Name' }
             /* Uncomment if you need additional filter options:
             { label: 'OwnerName', value: 'OwnerName' },
             { label: 'Phone', value: 'Phone' },
@@ -45,8 +45,8 @@ export default class FinancialAccountServicesList extends LightningElement {
     // Sorting options
     get SortByOptions() {
         return [
-            { label: 'Name', value: 'Name' },
-            { label: 'OwnerName', value: 'OwnerName' }
+            { label: 'Account Name', value: 'Name' },
+            { label: 'Account Owner', value: 'OwnerName' }
         ];
     }
     
